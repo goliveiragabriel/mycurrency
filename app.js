@@ -11,7 +11,7 @@
 			$scope.alerts = [];
 			// Cross-domain issue ( Status Code 501 ) in real path: http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml 
 			//  Please, change the requested url in production environment
-			$http.get("eurofxref-daily.xml", {
+			$http.get("http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", {
 				transformResponse: function (data) {
 					// Third party library to parse xml into json
 		      var x2js = new X2JS();
