@@ -17,8 +17,8 @@
 		      return json;
 		    }
 			}
-			// Cross-domain issue ( Status Code 501 ) in real path: https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml 
-			//  Please, change the requested url in production environment
+			// CORS issue in webserver side ( https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml )
+			//  The updated xml could not be parsed without webservice implementation
 			$http.get("eurofxref-daily.xml", req)
 				.success(function(data) {
 					var firstCurrency, secondCurrency;

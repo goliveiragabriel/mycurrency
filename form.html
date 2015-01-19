@@ -10,7 +10,7 @@
 		<div class="input-group">
 			<div class="input-group-addon">$</div>
 			<select class="form-control" for="firstCurrency" ng-model="currency.first">
-				<!-- Test description does not allow to cache the currencies -->
+				<!-- Test description does not allow caching the currencies -->
 				<option value="EUR">Euro</option>
 				<option value="USD">US dollar</option>
 				<option value="BGN">Bulgarian lev</option>
@@ -49,7 +49,7 @@
 		<label class="control-label" for="secondCurrency">Convert to</label>
 		<div class="input-group">
 			<div class="input-group-addon">$</div>
-			<select class="form-control" for="secondCurrency" ng-model="currency.second">
+			<select class="form-control" ng-model="currency.second">
 				<option value="EUR">Euro</option>
 				<option value="USD">US dollar</option>
 				<option value="BGN">Bulgarian lev</option>
