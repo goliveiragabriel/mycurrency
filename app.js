@@ -15,8 +15,7 @@
 		      var x2js = new X2JS();
 		      var json = x2js.xml_str2json(data);
 		      return json;
-		    },
-
+		    }
 			}
 			// Cross-domain issue ( Status Code 501 ) in real path: https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml 
 			//  Please, change the requested url in production environment
@@ -24,10 +23,10 @@
 				.success(function(data) {
 					var firstCurrency, secondCurrency;
 					$.map(data.Envelope.Cube.Cube.Cube, function(val, i) {
-						if ( val._currency === $("select[for='firstCurrency']").val() ) {
+						if ( val._currency === $scope.currency.first ) {
 							firstCurrency = val;
 						}
-						if ( val._currency ===  $("select[for='secondCurrency']").val() ) {
+						if ( val._currency ===  $scope.currency.second) {
 							secondCurrency = val;
 						}
 					});
@@ -38,7 +37,7 @@
 				});
 				// Anonymous function to calculate currencies rate
 				var calculateRate = function(firstCurrency, secondCurrency) {
-					return "1 " + firstCurrency._currency + " = " + ((secondCurrency._rate)/(firstCurrency._rate)).toFixed(3) + " " + secondCurrency._currency;
+					return $scope.currency.amount + " " + firstCurrency._currency + " = " + (((secondCurrency._rate)/(firstCurrency._rate))*($scope.currency.amount)).toFixed(3) + " " + secondCurrency._currency;
 				}
 		};
 

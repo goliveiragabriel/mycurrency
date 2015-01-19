@@ -1,8 +1,15 @@
 <form ng-submit="submit()" ng-controller="CurrencyController" class="form-inline">
+	<div class="form-group col-xs-1">
+		<label class="control-label" for="amount">Amount</label>
+		<div class="input-group">
+			<input type="text" name="amount" class="form-control" ng-model="currency.amount"/>
+		</div>
+	</div>
 	<div class="form-group col-xs-2">
+		<label class="control-label" for="firstCurrency">Currency</label>
 		<div class="input-group">
 			<div class="input-group-addon">$</div>
-			<select class="form-control" for="firstCurrency">
+			<select class="form-control" for="firstCurrency" ng-model="currency.first">
 				<!-- Test description does not allow to cache the currencies -->
 				<option value="EUR">Euro</option>
 				<option value="USD">US dollar</option>
@@ -39,9 +46,10 @@
 		</div>
 	</div>
 	<div class="form-group col-xs-2">
+		<label class="control-label" for="secondCurrency">Convert to</label>
 		<div class="input-group">
 			<div class="input-group-addon">$</div>
-			<select class="form-control" for="secondCurrency">
+			<select class="form-control" for="secondCurrency" ng-model="currency.second">
 				<option value="EUR">Euro</option>
 				<option value="USD">US dollar</option>
 				<option value="BGN">Bulgarian lev</option>

@@ -11,3 +11,6 @@
 a {
 	color: #E5FCC2 !important; /* overriding the bootstrap rule */
 }
+#submit{
+	margin-top:20px;
+}
