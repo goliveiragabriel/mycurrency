@@ -1,0 +1,13 @@
+.navbar {
+	background-color: #594F4F;
+}
+.panel-heading {
+	background-color:#45ADA8;
+	border-bottom: 1px solid #45ADA8;
+}
+.alert {
+	margin-top: 10px;
+}
+a {
+	color: #E5FCC2 !important; /* overriding the bootstrap rule */
+}

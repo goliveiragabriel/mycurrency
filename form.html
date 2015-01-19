@@ -1,0 +1,85 @@
+<form ng-submit="submit()" ng-controller="CurrencyController" class="form-inline">
+	<div class="form-group col-xs-2">
+		<div class="input-group">
+			<div class="input-group-addon">$</div>
+			<select class="form-control" for="firstCurrency">
+				<!-- Test description does not allow to cache the currencies -->
+				<option value="EUR">Euro</option>
+				<option value="USD">US dollar</option>
+				<option value="BGN">Bulgarian lev</option>
+				<option value="CZK">Czech koruna</option>
+				<option value="DKK">Danish krone</option>
+				<option value="GBP">Pound sterling</option>
+				<option value="HUF">Hungarian forint</option>
+				<option value="PLN">Polish zloty</option>
+				<option value="RON">Romanian leu</option>
+				<option value="SEK">Swedish krona</option>
+				<option value="CHF">Swiss franc</option>
+				<option value="NOK">Norwig krone</option>
+				<option value="HRK">Croatian kuna</option>
+				<option value="RUB">Russian rouble</option>
+				<option value="TRY">Turkish lira</option>
+				<option value="AUD">Australian dollar</option>
+				<option value="BRL">Brazilian real</option>
+				<option value="CAD">Canadian dolar</option>
+				<option value="CNY">Chinese yuan renminbi</option>
+				<option value="HKD">Hong Kong dollar</option>
+				<option value="IDR">Indonesian rupiah</option>
+				<option value="ILS">Israeli shekel</option>
+				<option value="INR">Indian rupee</option>
+				<option value="KRW">South Korean won</option>
+				<option value="MXN">Mexican peso</option>
+				<option value="MYR">Malaysian ringgit</option>
+				<option value="NZD">New Zealand dollar</option>
+				<option value="PHP">Philippine peso</option>
+				<option value="SGD">Singapore dollar</option>
+				<option value="THB">Thai baht</option>
+				<option value="ZAR">South African rand</option>
+			</select>
+		</div>
+	</div>
+	<div class="form-group col-xs-2">
+		<div class="input-group">
+			<div class="input-group-addon">$</div>
+			<select class="form-control" for="secondCurrency">
+				<option value="EUR">Euro</option>
+				<option value="USD">US dollar</option>
+				<option value="BGN">Bulgarian lev</option>
+				<option value="CZK">Czech koruna</option>
+				<option value="DKK">Danish krone</option>
+				<option value="GBP">Pound sterling</option>
+				<option value="HUF">Hungarian forint</option>
+				<option value="PLN">Polish zloty</option>
+				<option value="RON">Romanian leu</option>
+				<option value="SEK">Swedish krona</option>
+				<option value="CHF">Swiss franc</option>
+				<option value="NOK">Norwig krone</option>
+				<option value="HRK">Croatian kuna</option>
+				<option value="RUB">Russian rouble</option>
+				<option value="TRY">Turkish lira</option>
+				<option value="AUD">Australian dollar</option>
+				<option value="BRL">Brazilian real</option>
+				<option value="CAD">Canadian dolar</option>
+				<option value="CNY">Chinese yuan renminbi</option>
+				<option value="HKD">Hong Kong dollar</option>
+				<option value="IDR">Indonesian rupiah</option>
+				<option value="ILS">Israeli shekel</option>
+				<option value="INR">Indian rupee</option>
+				<option value="KRW">South Korean won</option>
+				<option value="MXN">Mexican peso</option>
+				<option value="MYR">Malaysian ringgit</option>
+				<option value="NZD">New Zealand dollar</option>
+				<option value="PHP">Philippine peso</option>
+				<option value="SGD">Singapore dollar</option>
+				<option value="THB">Thai baht</option>
+				<option value="ZAR">South African rand</option>
+			</select>
+		</div>
+	</div>
+	<button type="submit" id="submit" class="btn btn-primary">Calculate</button>
+	<div ng-repeat="alert in alerts" ng-show="true">
+		<div class="alert alert-success fade in" role="alert" id="alert-box">
+			<strong>The result is: </strong> {{alert.message}}
+		</div>
+	</div>
+</form>
