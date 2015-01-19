@@ -5,7 +5,7 @@
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.10/angular.min.js"></script>
 	    <script src="https://code.angularjs.org/1.2.16/angular-sanitize.min.js"></script>
-		<script type="text/javascript" src="https://demos.amitavroy.com/learningci/assets/js/xml2json.js" charset="UTF-8"></script>
+		<script type="text/javascript" src="xml2json.min.js" charset="UTF-8"></script>
 	    <script src="app.js"></script>
 	    <script src="components.js"></script>
 	    <link rel="stylesheet" href="bootstrap.css">
