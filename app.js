@@ -20,7 +20,7 @@
 			}
 			// Cross-domain issue ( Status Code 501 ) in real path: https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml 
 			//  Please, change the requested url in production environment
-			$http.get("https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml", req)
+			$http.get("eurofxref-daily.xml", req)
 				.success(function(data) {
 					var firstCurrency, secondCurrency;
 					$.map(data.Envelope.Cube.Cube.Cube, function(val, i) {
